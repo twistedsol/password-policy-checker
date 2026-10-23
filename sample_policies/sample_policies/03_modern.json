@@ -1,0 +1,13 @@
+{
+  "name": "Modern policy (sample)",
+  "min_length": 12,
+  "max_length": 128,
+  "check_breached_passwords": true,
+  "mfa_required": true,
+  "max_failed_attempts": 5,
+  "hash_algorithm": "argon2id",
+  "salted": true,
+  "reset_token_minutes": 30,
+  "security_questions": false,
+  "allow_paste": true
+}
