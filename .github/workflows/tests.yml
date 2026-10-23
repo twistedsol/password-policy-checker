@@ -1,0 +1,24 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run unit tests
+        run: python -m unittest -v
+      - name: Run the checker on the sample policies
+        # Exit code 1 is expected here: one sample has high findings.
+        run: |
+          python policy_checker.py sample_policies/01_weak_legacy.json || test $? -eq 1
