@@ -85,7 +85,13 @@ python -m unittest -v
 
 I used AI to help write the code and tests, then ran everything myself, read each rule and checked the sample results by hand. The rules follow current public guidance on passwords (long passphrases, breached-password checks, MFA, slow salted hashes, no forced rotation).
 
-## Limits
+## What I learned
+
+- Password advice has changed. Forced symbols and changing passwords every 60 or 90 days are now discouraged. Length, a breached-password check and MFA matter more.
+- A policy file shows what a system is supposed to do, not what it really does, so this tool can only judge the rules on paper.
+- My own tests caught a sample file I had put in the wrong folder. That is exactly why I run them on every push.
+-
+- ## Limits
 
 - It judges a policy **file**, not a live system. If the file says one thing and the system does another, it cannot tell.
 - It cannot test passwords or check how a site really stores them.
