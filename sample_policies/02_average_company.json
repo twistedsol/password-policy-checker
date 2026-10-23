@@ -1,0 +1,14 @@
+{
+  "name": "Average company (sample)",
+  "min_length": 10,
+  "max_length": 64,
+  "require_uppercase": true,
+  "require_digit": true,
+  "max_age_days": 90,
+  "check_breached_passwords": false,
+  "mfa_required": true,
+  "max_failed_attempts": 10,
+  "hash_algorithm": "bcrypt",
+  "salted": true,
+  "reset_token_minutes": 60
+}
