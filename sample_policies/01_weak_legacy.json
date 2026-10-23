@@ -1,0 +1,17 @@
+{
+  "name": "Legacy intranet (sample)",
+  "min_length": 6,
+  "max_length": 12,
+  "require_uppercase": true,
+  "require_lowercase": true,
+  "require_digit": true,
+  "require_symbol": true,
+  "max_age_days": 60,
+  "check_breached_passwords": false,
+  "mfa_required": false,
+  "max_failed_attempts": 0,
+  "hash_algorithm": "md5",
+  "salted": false,
+  "reset_token_minutes": 1440,
+  "security_questions": true,
+  "allow_paste": false
